@@ -14,6 +14,11 @@
                         <li><a href="brandlist.php">Danh mục thương hiệu</a> </li>
                     </ul>
                 </li>
+                <li><a class="menuitem">Quản lý Admin</a>
+    <ul class="submenu">
+        <li><a href="userlist.php">Danh sách Admin</a></li>
+    </ul>
+</li>
                <li><a class="menuitem">Site Option</a>
                     <ul class="submenu">
                         <li><a href="titleslogan.php">Title & Slogan</a></li>
