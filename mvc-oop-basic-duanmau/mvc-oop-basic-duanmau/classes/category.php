@@ -47,6 +47,39 @@ include '../helpers/format.php';
             $result = $this->db->select($query);
             return $result;
         }
-     }
+       public function update_category($catName, $id)
+{
+    $catName = $this->fm->validation($catName);
+    $catName = mysqli_real_escape_string($this->db->link, $catName);
+    $id = mysqli_real_escape_string($this->db->link, $id);
+
+    if (empty($catName)) {
+        return "<span class='error'>Category Name must not be empty!</span>";
+    } else {
+        $query = "UPDATE tbl_category SET catName = '$catName' WHERE catId = '$id'";
+        $result = $this->db->update($query);
+        if ($result) {
+            return "success"; // ✅ không dùng header ở đây
+        } else {
+            return "<span class='error'>Category Update Not Inserted!</span>";
+        }
+    }
+}
+    public function delete_category($id)
+{
+    $query = "DELETE FROM tbl_category WHERE catId = '$id'";    
+    $result = $this->db->delete($query);
+    
+    if ($result) {
+        $alert = "<span class='success'>Xóa danh mục thành công</span>";
+        return $alert;
+    } else {
+        $alert = "<span class='error'>Xóa không thành công</span>";
+        return $alert;  
+    }
+}
+
+
+            }
      
 ?>
