@@ -1,6 +1,6 @@
 <?php
-include '../lib/database.php';
-include '../helpers/format.php';
+require_once '../lib/database.php';
+require_once '../helpers/format.php';
 ?>
 <?php
     class category 

@@ -14,9 +14,15 @@
                         <li><a href="brandlist.php">Danh mục thương hiệu</a> </li>
                     </ul>
                 </li>
-                <li><a class="menuitem">Quản lý Admin</a>
-    <ul class="submenu">
-        <li><a href="userlist.php">Danh sách Admin</a></li>
+                  <li><a class="menuitem">Sản phẩm</a>
+                    <ul class="submenu">
+                        <li><a href="productadd.php">Thêm sản phảm</a> </li>
+                        <li><a href="productlist.php">List sản phẩm</a> </li>
+                    </ul>
+                </li>
+                  <li><a class="menuitem">Quản lý Admin</a>
+                    <ul class="submenu">
+                    <li><a href="userlist.php">Danh sách Admin</a></li>
     </ul>
 </li>
                <li><a class="menuitem">Site Option</a>
@@ -40,12 +46,7 @@
                         <li><a href="sliderlist.php">Slider List</a> </li>
                     </ul>
                 </li>
-                <li><a class="menuitem">Product Option</a>
-                    <ul class="submenu">
-                        <li><a href="addproduct.php">Add Product</a> </li>
-                        <li><a href="productlist.php">Product List</a> </li>
-                    </ul>
-                </li>
+              
             </ul>
         </div>
     </div>
