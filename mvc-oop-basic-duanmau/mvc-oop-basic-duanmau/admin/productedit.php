@@ -11,7 +11,7 @@
 } else {
     $id = $_GET['productid'];
 }
-        if($_SERVER['REQUEST_METHOD'] == 'POST'  && isset($_POST['productid'])) {
+        if($_SERVER['REQUEST_METHOD'] == 'POST'  && isset($_POST['submit'])) {
 			 
 			$updateProduct = $pd->update_product($_POST , $_FILES ,$id);
 		}
@@ -23,8 +23,8 @@
         <h2> Sửa sản phẩm mới</h2>
         <div class="block">
               <?php
-                if (isset($insertpProduct)) {
-                    echo $insertpProduct;
+                if (isset($updateProduct)) {
+                    echo $updateProduct;
                 }
             ?>     
             <?php
