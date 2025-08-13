@@ -1,4 +1,5 @@
 <?php
+
 include '../lib/database.php';
  // nếu bạn đã include file DB ở nơi khác thì bỏ dòng này
 

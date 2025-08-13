@@ -1,6 +1,7 @@
 <?php
-require_once '../lib/database.php';
-require_once '../helpers/format.php';
+$filepath = realpath(dirname(__FILE__));
+require_once ($filepath.'/../lib/database.php');
+require_once ($filepath.'/../helpers/format.php');
 ?>
 <?php
     class category 

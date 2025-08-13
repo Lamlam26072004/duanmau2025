@@ -1,7 +1,10 @@
 <?php
-require_once '../lib/database.php';
-require_once '../helpers/format.php';
 
+$filepath = realpath(dirname(__FILE__));
+include_once ($filepath.'/../lib/database.php');
+include_once ($filepath.'/../helpers/format.php');
+?>
+<?php
 class product 
 {
     private $db;
@@ -139,5 +142,26 @@ class product
             return "<span class='error'>Xóa product không thành công</span>";  
         }
     }
-} // <-- đóng class
+
+
+
+    // forn end 
+    public function getFeaturedProducts() {
+        $query = "SELECT * FROM tbl_product WHERE type='0' ORDER BY productId DESC LIMIT 4";
+        return $this->db->select($query);
+    }
+    public function getNewProducts() {
+        $query = "SELECT * FROM tbl_product  ORDER BY productId DESC LIMIT 4";
+        return $this->db->select($query);
+    }
+    public function get_details($id) {
+    $query = "SELECT p.*, c.catName, b.brandName 
+              FROM tbl_product p
+              INNER JOIN tbl_category c ON p.catId = c.catId
+              INNER JOIN tbl_brand b ON p.brandId = b.brandId
+              WHERE p.productId = '$id' LIMIT 1";
+    return $this->db->select($query);
+}
+
+} 
 ?>
